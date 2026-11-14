@@ -81,7 +81,31 @@ svg[role=img]{outline:1px solid var(--line)}
 }
 @media (max-width:520px){.hero .big2 .sm{display:none}}
 @media print{.util,nav.nb,.side{display:none}.page{display:block}}
-</style><style id="mob">@media(max-width:520px){.hero{--sh:20px}.hero .big{letter-spacing:.06em}}</style></head><body>
+</style><style id="mob">@media(max-width:520px){.hero{--sh:20px}.hero .big{letter-spacing:.06em}}</style><style id="lu11">
+html body{--bl:#fff;--bs:#6f7a72;--face:#d6dcd4;--ol:#1a2a20;--wh:#fff}
+html[data-theme=dark] body{--bl:#2f4a3a;--bs:#020a05;--face:#14281c;--ol:#000;--wh:#c4d6ca}
+@media(prefers-color-scheme:dark){html:not([data-theme=light]) body{--bl:#2f4a3a;--bs:#020a05;--face:#14281c;--ol:#000;--wh:#c4d6ca}}
+.hero .plate{display:flex;flex-direction:column;gap:1px}
+.hero .plate b{font:900 clamp(17px,3.4vw,27px)/1.1 Verdana,sans-serif;letter-spacing:.1em;color:var(--gd)}
+.hero .plate small{font-size:clamp(9.5px,1.5vw,11.5px);letter-spacing:.14em;text-transform:uppercase;color:var(--mut)}
+.tick{display:flex;align-items:center;background:#06140c;color:#74ffa6;font:12px/1 "Courier New",monospace;border-bottom:2px solid var(--au);overflow:hidden;white-space:nowrap}
+.tick b{background:var(--au);color:#1a1400;padding:6px 10px;flex:none;letter-spacing:.1em;text-transform:uppercase}
+.tick span{display:block;padding-left:100%;animation:tk 40s linear infinite;animation-delay:-14s}
+@keyframes tk{to{transform:translateX(-100%)}}
+@media(prefers-reduced-motion:reduce){.tick span{animation:none;padding-left:10px}}
+.cnt{font-family:"Courier New",monospace;background:#000;color:#74ffa6;padding:0 6px;letter-spacing:.15em}
+
+html body .util{background:var(--face)!important;border-bottom:2px solid var(--bs);font-size:12px}
+html body .hero{position:relative;height:84px;border-bottom:4px solid var(--au);
+ background:linear-gradient(#008c45 0 12px,var(--wh) 12px 24px,#008c45 24px 36px,var(--wh) 36px 48px,#008c45 48px 60px,var(--wh) 60px 72px,#008c45 72px 84px)!important}
+html body .hero .plate{position:absolute;left:max(12px,calc((100vw - 1336px)/2));top:50%;transform:translateY(-50%);max-width:calc(100vw - 24px);background:var(--paper);border:2px solid;border-color:var(--bl) var(--bs) var(--bs) var(--bl);outline:1px solid var(--ol);padding:5px 18px}
+html body nav.nb{background:var(--face)!important;border-top:0;border-bottom:3px solid var(--au)}
+html body nav.nb .in{padding:2px 0}
+html body nav.nb a{margin:2px;padding:3px 12px;border:2px solid;border-color:var(--bl) var(--bs) var(--bs) var(--bl);font-size:13px}
+html body nav.nb a:hover{background:var(--au)}
+html body .box,html body .intro,html body .sec,html body .card,html body .foot .box{border:2px solid;border-color:var(--bl) var(--bs) var(--bs) var(--bl);outline:1px solid var(--ol);box-shadow:none}
+html body .page{gap:10px;padding-top:12px}
+</style></head><body>
 <div id="app"></div>
 <script>
 var LANG='en';try{var sl=localStorage.getItem('luisara-lang');if(sl==='es'||sl==='en')LANG=sl;else if((navigator.language||'').slice(0,2)==='es')LANG='es'}catch(e){}
@@ -259,4 +283,9 @@ function render(){
 }
 setInterval(function(){var c=document.getElementById('clk');if(c)c.textContent=clock()},30000);
 render();
-</script></body></html>
+</script><script>(function(){function fix(){var h=document.querySelector('.hero');if(!h||h.dataset.r)return;var big=h.querySelector('.big'),sm=h.querySelectorAll('.sm');if(!big)return;h.dataset.r=1;
+h.innerHTML='<div class="plate"><small>'+sm[0].textContent+'</small><b>'+big.textContent+'</b><small>'+sm[1].textContent+'</small></div>';
+var es=document.documentElement.lang==='es';var nb=document.querySelector('nav.nb');
+if(nb&&!document.querySelector('.tick'))nb.insertAdjacentHTML('afterend','<div class="tick"><b>'+(es?'Avisos':'Notices')+'</b><span>'+(es?'Bienvenidos al Portal del Gobierno de la República de Luisara · Año 335 · La paz ganada · Información oficial sobre las instituciones del Estado':'Welcome to the Government Portal of the Republic of Luisara · Year 335 · La paz ganada · Official information on the institutions of the State')+'</span></div>');
+var f=document.querySelector('.foot .bd');if(f&&!f.querySelector('.cnt'))f.insertAdjacentHTML('beforeend','<span>'+(es?'Visitante n.º ':'Visitor no. ')+'<span class="cnt">0004217</span> · '+(es?'Mejor visto a 1024 × 768':'Best viewed at 1024 × 768')+'</span>')}
+new MutationObserver(fix).observe(document.getElementById('app'),{childList:true});fix()})();</script></body></html>
