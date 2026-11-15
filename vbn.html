@@ -347,7 +347,6 @@ html:root:root body[data-retro="home"] main#top>.sec{margin-bottom:10px!importan
 html:root:root .hero .w{grid-template-columns:1fr!important}
 html:root:root .one-art{display:none!important}}
 @media(min-width:901px){html:root:root .top .brand svg.lpnm{width:92px!important;height:auto!important}
-html:root:root .box h4::after,html:root:root .sch h4::after,html:root:root .chart h4::after,html:root:root .bx>h3::after,html:root:root .bx>.bh::after{content:"_ \25A1 \00D7"!important;float:right!important;letter-spacing:.25em!important;font-weight:700!important;opacity:.9!important}
 html:root:root nav.main::before{content:"Channels"!important;display:block!important;font:700 11px var(--r-ff)!important;letter-spacing:.14em!important;text-transform:uppercase!important;padding:2px 4px 6px!important;color:var(--r-topink)!important;opacity:.85!important;border-bottom:1px solid color-mix(in srgb,var(--r-topink) 40%,transparent)!important;margin-bottom:4px!important}
 html:root:root nav.main a::before{content:""!important;display:inline-block!important;width:8px!important;height:8px!important;margin-right:8px!important;background:var(--gold)!important;border:1px solid #000!important}}
 html:root:root h1,html:root:root h2,html:root:root h3,html:root:root h4,html:root:root .eyebrow,html:root:root .btn,html:root:root nav a,html:root:root .tabsbar a,html:root:root .tab,html:root:root time,html:root:root .g{font-family:Consolas,"Courier New",monospace!important}
@@ -419,7 +418,28 @@ html:root:root .hero .time,html:root:root .hero .meta,html:root:root .hero .when
 html:root:root .sec>.w,html:root:root .sec>.wrap{padding:0 16px!important}}
 @media(prefers-color-scheme:dark){html:root:root:not([data-theme="light"]) .poster{box-shadow:inset 0 0 0 999px rgba(0,0,0,.38)!important}}
 html:root:root[data-theme="dark"] .poster{box-shadow:inset 0 0 0 999px rgba(0,0,0,.38)!important}
-</style></head>
+</style><style id="bevel12">html:root:root{--bh:rgba(255,255,255,.42);--bh2:rgba(255,255,255,.16);--bl:rgba(0,0,0,.55);--bl2:rgba(0,0,0,.3);--bk:#000}
+html:root:root[data-theme=light]{--bh:rgba(255,255,255,.95);--bh2:rgba(255,255,255,.55);--bl:rgba(0,0,0,.5);--bl2:rgba(0,0,0,.22)}
+@media(prefers-color-scheme:light){html:root:root:not([data-theme=dark]){--bh:rgba(255,255,255,.95);--bh2:rgba(255,255,255,.55);--bl:rgba(0,0,0,.5);--bl2:rgba(0,0,0,.22)}}
+
+html:root:root .hero,html:root:root .sec,html:root:root .panel,html:root:root .box,html:root:root .shell,html:root:root .rc,html:root:root .rcard,html:root:root .net,html:root:root .ar,html:root:root .show,html:root:root .vncbox,html:root:root .vnclink,html:root:root .also,html:root:root .sc,html:root:root footer{box-shadow:inset 2px 2px 0 var(--bh),inset -2px -2px 0 var(--bl),inset 4px 4px 0 var(--bh2),inset -4px -4px 0 var(--bl2),0 0 0 1px var(--bk),4px 4px 0 rgba(0,0,0,.45)!important}
+html:root:root .poster{box-shadow:inset 3px 3px 0 var(--bh),inset -3px -3px 0 var(--bl),0 0 0 1px var(--bk),3px 3px 0 rgba(0,0,0,.5)!important}
+html:root:root header.top a:not(.brand):not(.logo):not([class*=brand]):not([class*=logo]),html:root:root .btn,html:root:root .tab,html:root:root button.ib,html:root:root .chip,html:root:root .tag,html:root:root .dir li,html:root:root nav.fast a{box-shadow:inset 2px 2px 0 var(--bh),inset -2px -2px 0 var(--bl),0 0 0 1px var(--bk),2px 2px 0 rgba(0,0,0,.45)!important;background-image:linear-gradient(rgba(255,255,255,.14),rgba(0,0,0,.16))!important}
+html:root:root header.top a:not(.brand):active,html:root:root .btn:active,html:root:root .tab:active,html:root:root .tab.on,html:root:root .tab.act,html:root:root .tab.active,html:root:root .tab[aria-selected=true],html:root:root .tab[aria-pressed=true],html:root:root header.top a.on,html:root:root header.top a.cur,html:root:root header.top a[aria-current]{box-shadow:inset 2px 2px 0 var(--bl),inset -2px -2px 0 var(--bh),inset 4px 4px 0 var(--bl2),0 0 0 1px var(--bk)!important;background-image:linear-gradient(rgba(0,0,0,.18),rgba(0,0,0,.02))!important}
+html:root:root ul.sch,html:root:root ol.sched,html:root:root .dir,html:root:root .stn,html:root:root .mk{box-shadow:inset 2px 2px 0 var(--bl),inset -2px -2px 0 var(--bh),inset 4px 4px 0 var(--bl2),0 0 0 1px var(--bk)!important}
+html:root:root .sec>h2,html:root:root .hd2,html:root:root h3.sh,html:root:root .box>h4,html:root:root .panel>h2{box-shadow:inset 0 2px 0 var(--bh),inset 0 -2px 0 var(--bl)!important;background-image:linear-gradient(rgba(255,255,255,.16),rgba(0,0,0,.2))!important}
+html:root:root header.top{box-shadow:inset -2px 0 0 var(--bl),inset -4px 0 0 var(--bl2),inset 2px 0 0 var(--bh),4px 0 0 rgba(0,0,0,.4)!important}
+html:root:root li.now{box-shadow:inset 2px 2px 0 var(--bh),inset -2px -2px 0 var(--bl),0 0 0 1px var(--bk)!important}
+</style><style id="xdir13">
+a.xdir{font-family:inherit;font-weight:700;color:inherit;text-decoration:underline;white-space:normal;max-width:100%;overflow-wrap:anywhere;letter-spacing:.03em}
+.sd a.xdir::before{content:none!important}
+header.top a.xdir,.sd a.xdir,#nav a.xdir,.app>aside a.xdir{display:block;margin:10px 0;padding:6px 10px;text-decoration:none;text-align:center;border:1px solid currentColor;font-size:11px;text-transform:uppercase;letter-spacing:.08em}
+.topbar a.xdir,.util a.xdir,.strip a.xdir{display:inline-block;margin:0 10px;font-size:12px}
+footer a.xdir{display:block;margin:10px 0;font-size:12px}
+</style><style id="hero13">html:root:root .hero>.wrap{padding:34px clamp(40px,4.5vw,64px)!important}
+html:root:root .hero.wrap{padding:34px clamp(40px,4.5vw,64px)!important}
+html:root:root .hd2.wrap{padding:24px clamp(40px,4.5vw,64px)!important}
+@media(max-width:860px){html:root:root .hero>.wrap,html:root:root .hero.wrap,html:root:root .hd2.wrap{padding:28px 24px!important}}</style><style id="ct13">html:root:root[data-theme=light] aside.vncbox a.link,html:root:root[data-theme=light] .vnclink a{color:#a9b9ff!important}@media(prefers-color-scheme:light){html:root:root:not([data-theme=dark]) aside.vncbox a.link,html:root:root:not([data-theme=dark]) .vnclink a{color:#a9b9ff!important}}</style></head>
 <body data-retro="home">
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
 <linearGradient id="vrsg" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#08acf3"/><stop offset=".5" stop-color="#07d6ad"/><stop offset="1" stop-color="#4069ed"/></linearGradient>
@@ -789,5 +809,18 @@ html:root:root[data-theme="dark"] .poster{box-shadow:inset 0 0 0 999px rgba(0,0,
 })();
 
 </script>
-<nav class="fast" aria-label="VBN Text keys"><span class="pg"><b>P100</b> VBN TEXT</span><a href="#schedule">Schedule</a><a href="#shows">Shows</a><a href="#sport">Sport</a><a href="#news">News</a></nav></body>
+<nav class="fast" aria-label="VBN Text keys"><span class="pg"><b>P100</b> VBN TEXT</span><a href="#schedule">Schedule</a><a href="#shows">Shows</a><a href="#sport">Sport</a><a href="#news">News</a></nav><script id="xdir13js">(function(){var H='index.html',T='\u25C2 Xarpeia directory',d=document;
+function mk(c){var a=d.createElement('a');a.href=H;a.className='xdir '+c;a.textContent=T;a.title='Xarpeia: directory of sites on the Kosmos Datagraph';return a}
+function put(){
+ if(!d.querySelector('a.xdir.xh')){var h,a=mk('xh');
+  if(h=d.querySelector('.topbar .wrap')){h.insertBefore(a,h.querySelector('time'))}
+  else if(h=d.querySelector('.sd')){h.appendChild(a)}
+  else if(h=d.querySelector('.strip .in')){h.appendChild(a)}
+  else if(h=d.querySelector('header.top .wrap')){h.appendChild(a)}
+  else if(h=d.querySelector('#nav')){h.appendChild(a)}
+  else if(h=d.querySelector('header.win')){h.appendChild(a)}
+  else if(h=d.querySelector('.util .wrap')){h.appendChild(a)}
+  else if(h=d.querySelector('.app>aside')){h.insertBefore(a,h.firstChild)}}
+ if(!d.querySelector('a.xdir.xf')){var f=d.querySelector('footer .wrap')||d.querySelector('footer .in')||d.querySelector('footer');if(f)f.appendChild(mk('xf'))}}
+put();new MutationObserver(function(){put()}).observe(d.body,{childList:true,subtree:true});})();</script></body>
 </html>

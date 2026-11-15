@@ -80,7 +80,13 @@ html:root:root .app::before{content:"Citizen card - Properties"!important;grid-c
 html:root:root aside{margin:0!important;height:calc(100vh - 56px - 18px - 18px - 34px)!important;top:auto!important;position:static!important;box-shadow:inset 1px 1px var(--m-lo),inset -1px -1px var(--m-hi),0 0 0 1px var(--m-dk)!important}
 html:root:root aside h1{display:none!important}
 html:root:root aside{padding-top:14px!important}
-html:root:root .stage{background:color-mix(in srgb,var(--m-face) 70%,#000)!important;box-shadow:inset 1px 1px var(--m-lo),inset -1px -1px var(--m-hi),0 0 0 1px var(--m-dk)!important;padding:20px 16px 24px!important;max-height:calc(100vh - 56px - 18px - 18px - 34px)!important;overflow:auto!important}}</style></head>
+html:root:root .stage{background:color-mix(in srgb,var(--m-face) 70%,#000)!important;box-shadow:inset 1px 1px var(--m-lo),inset -1px -1px var(--m-hi),0 0 0 1px var(--m-dk)!important;padding:20px 16px 24px!important;max-height:calc(100vh - 56px - 18px - 18px - 34px)!important;overflow:auto!important}}</style><style id="xdir13">
+a.xdir{font-family:inherit;font-weight:700;color:inherit;text-decoration:underline;white-space:normal;max-width:100%;overflow-wrap:anywhere;letter-spacing:.03em}
+.sd a.xdir::before{content:none!important}
+header.top a.xdir,.sd a.xdir,#nav a.xdir,.app>aside a.xdir{display:block;margin:10px 0;padding:6px 10px;text-decoration:none;text-align:center;border:1px solid currentColor;font-size:11px;text-transform:uppercase;letter-spacing:.08em}
+.topbar a.xdir,.util a.xdir,.strip a.xdir{display:inline-block;margin:0 10px;font-size:12px}
+footer a.xdir{display:block;margin:10px 0;font-size:12px}
+</style></head>
 <body><div class="app">
 <aside>
 <h1>Citizen card builder</h1>
@@ -154,4 +160,17 @@ addEventListener("pointerup",()=>drag=null);
 function fit(){const w=document.querySelector(".stage").clientWidth-32;document.documentElement.style.setProperty("--s",Math.min(1,w/856))}
 addEventListener("resize",fit);
 pick("ER");S.pob="Port of Erimos, Erimos";S.no="ER-4081-7263-5";fit();sync();render();
-</script></body></html>
+</script><script id="xdir13js">(function(){var H='index.html',T='\u25C2 Xarpeia directory',d=document;
+function mk(c){var a=d.createElement('a');a.href=H;a.className='xdir '+c;a.textContent=T;a.title='Xarpeia: directory of sites on the Kosmos Datagraph';return a}
+function put(){
+ if(!d.querySelector('a.xdir.xh')){var h,a=mk('xh');
+  if(h=d.querySelector('.topbar .wrap')){h.insertBefore(a,h.querySelector('time'))}
+  else if(h=d.querySelector('.sd')){h.appendChild(a)}
+  else if(h=d.querySelector('.strip .in')){h.appendChild(a)}
+  else if(h=d.querySelector('header.top .wrap')){h.appendChild(a)}
+  else if(h=d.querySelector('#nav')){h.appendChild(a)}
+  else if(h=d.querySelector('header.win')){h.appendChild(a)}
+  else if(h=d.querySelector('.util .wrap')){h.appendChild(a)}
+  else if(h=d.querySelector('.app>aside')){h.insertBefore(a,h.firstChild)}}
+ if(!d.querySelector('a.xdir.xf')){var f=d.querySelector('footer .wrap')||d.querySelector('footer .in')||d.querySelector('footer');if(f)f.appendChild(mk('xf'))}}
+put();new MutationObserver(function(){put()}).observe(d.body,{childList:true,subtree:true});})();</script></body></html>

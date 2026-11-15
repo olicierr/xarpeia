@@ -302,6 +302,12 @@ ul.lk .dots,.idx .dots{border-bottom-color:var(--rule)}
 .dip a strong{font-size:clamp(16px,1.75vw,24px)!important;letter-spacing:.02em;overflow-wrap:normal}
 .dip a{padding-left:14px!important;padding-right:12px!important}
 @media (max-width:860px){.dip a strong{font-size:26px!important}}
+</style><style id="xdir13">
+a.xdir{font-family:inherit;font-weight:700;color:inherit;text-decoration:underline;white-space:normal;max-width:100%;overflow-wrap:anywhere;letter-spacing:.03em}
+.sd a.xdir::before{content:none!important}
+header.top a.xdir,.sd a.xdir,#nav a.xdir,.app>aside a.xdir{display:block;margin:10px 0;padding:6px 10px;text-decoration:none;text-align:center;border:1px solid currentColor;font-size:11px;text-transform:uppercase;letter-spacing:.08em}
+.topbar a.xdir,.util a.xdir,.strip a.xdir{display:inline-block;margin:0 10px;font-size:12px}
+footer a.xdir{display:block;margin:10px 0;font-size:12px}
 </style></head>
 <body>
 <div class="util"><div class="wrap"><span id="stDate"></span><span id="stGate"></span><span class="sp"><button class="btn" id="theme" title="Toggle theme" aria-label="Toggle light or dark">Theme ◐</button></span></div></div>
@@ -393,5 +399,18 @@ window.addEventListener('hashchange',route);route();setInterval(tick,30000);
 var th=document.getElementById('theme');th.onclick=function(){var r=document.documentElement,c=r.getAttribute('data-theme');if(!c)c=matchMedia('(prefers-color-scheme:light)').matches?'light':'dark';var n=c==='dark'?'light':'dark';r.setAttribute('data-theme',n);try{localStorage.setItem('erimos-theme',n)}catch(e){}};
 try{var s=localStorage.getItem('erimos-theme');if(s)document.documentElement.setAttribute('data-theme',s)}catch(e){}
 </script>
-</body>
+<script id="xdir13js">(function(){var H='index.html',T='\u25C2 Xarpeia directory',d=document;
+function mk(c){var a=d.createElement('a');a.href=H;a.className='xdir '+c;a.textContent=T;a.title='Xarpeia: directory of sites on the Kosmos Datagraph';return a}
+function put(){
+ if(!d.querySelector('a.xdir.xh')){var h,a=mk('xh');
+  if(h=d.querySelector('.topbar .wrap')){h.insertBefore(a,h.querySelector('time'))}
+  else if(h=d.querySelector('.sd')){h.appendChild(a)}
+  else if(h=d.querySelector('.strip .in')){h.appendChild(a)}
+  else if(h=d.querySelector('header.top .wrap')){h.appendChild(a)}
+  else if(h=d.querySelector('#nav')){h.appendChild(a)}
+  else if(h=d.querySelector('header.win')){h.appendChild(a)}
+  else if(h=d.querySelector('.util .wrap')){h.appendChild(a)}
+  else if(h=d.querySelector('.app>aside')){h.insertBefore(a,h.firstChild)}}
+ if(!d.querySelector('a.xdir.xf')){var f=d.querySelector('footer .wrap')||d.querySelector('footer .in')||d.querySelector('footer');if(f)f.appendChild(mk('xf'))}}
+put();new MutationObserver(function(){put()}).observe(d.body,{childList:true,subtree:true});})();</script></body>
 </html>

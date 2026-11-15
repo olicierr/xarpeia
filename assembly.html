@@ -425,7 +425,6 @@ html:root:root .pane{border:0!important;box-shadow:inset 1px 1px 0 var(--sh),ins
 html:root:root .sec-head{max-width:none!important;width:100%!important}
 html:root:root .pane .sechead{max-width:none!important;width:100%!important}
 html:root:root .sec-head h2,html:root:root .pane .sechead h2{display:block!important;justify-self:stretch!important;width:100%!important;max-width:none!important;box-sizing:border-box!important;background:linear-gradient(90deg,var(--sh),var(--line))!important;color:#fff!important;padding:5px 12px!important;font:700 17px Georgia,"Times New Roman",serif!important;letter-spacing:.01em!important;margin-bottom:12px!important}
-html:root:root .sec-head h2::after,html:root:root .pane .sechead h2::after{content:"_ \25A1 \00D7"!important;float:right!important;letter-spacing:.25em!important;font:700 12px Tahoma,Verdana,sans-serif!important}
 html:root:root .sec-head .mono,html:root:root .sechead .kicker{background:linear-gradient(90deg,var(--gold),color-mix(in srgb,#fff 35%,var(--gold)))!important;color:var(--btnk)!important;padding:2px 14px!important;font:700 11px Tahoma,Verdana,sans-serif!important;letter-spacing:.16em!important;text-transform:uppercase!important;box-shadow:none!important}
 html:root:root body .hero h1,html:root:root body .pane h1{font-family:Georgia,"Times New Roman",serif!important;font-weight:700!important;letter-spacing:0!important;padding:8px 14px!important;background:linear-gradient(90deg,color-mix(in srgb,var(--gold) 30%,transparent),transparent 78%)!important;border-bottom:3px double var(--gold)!important}
 html:root:root .sd .box{border:0!important;box-shadow:inset 1px 1px 0 var(--hi),inset -1px -1px 0 var(--sh),0 0 0 1px #000!important;background:var(--card)!important;padding:0 0 8px!important}
@@ -462,7 +461,13 @@ html:root:root body,html:root:root body .lead,html:root:root body p,html:root:ro
 html:root:root body .hero h1,html:root:root body .pane h1{font-family:Tahoma,Verdana,sans-serif!important;font-weight:700!important;letter-spacing:.01em!important}
 html:root:root body .hero h1 em,html:root:root body .pane h1 em{font-weight:700!important;font-style:normal!important}
 html:root:root body :not(.mono):not(.eyebrow):not(.kicker):not(code):not(pre):not(svg):not(svg *){font-family:Tahoma,Verdana,sans-serif!important}
-html:root:root .mono,html:root:root .eyebrow,html:root:root .kicker{font-family:"Courier New",monospace!important}</style></head>
+html:root:root .mono,html:root:root .eyebrow,html:root:root .kicker{font-family:"Courier New",monospace!important}</style><style id="xdir13">
+a.xdir{font-family:inherit;font-weight:700;color:inherit;text-decoration:underline;white-space:normal;max-width:100%;overflow-wrap:anywhere;letter-spacing:.03em}
+.sd a.xdir::before{content:none!important}
+header.top a.xdir,.sd a.xdir,#nav a.xdir,.app>aside a.xdir{display:block;margin:10px 0;padding:6px 10px;text-decoration:none;text-align:center;border:1px solid currentColor;font-size:11px;text-transform:uppercase;letter-spacing:.08em}
+.topbar a.xdir,.util a.xdir,.strip a.xdir{display:inline-block;margin:0 10px;font-size:12px}
+footer a.xdir{display:block;margin:10px 0;font-size:12px}
+</style><style id="ct13">html:root:root[data-theme=light] footer{background-image:linear-gradient(90deg,#27304f,#46528a)!important}@media(prefers-color-scheme:light){html:root:root:not([data-theme=dark]) footer{background-image:linear-gradient(90deg,#27304f,#46528a)!important}}html:root:root[data-theme=light] footer .motto{color:#f3dc9a!important}@media(prefers-color-scheme:light){html:root:root:not([data-theme=dark]) footer .motto{color:#f3dc9a!important}}</style></head>
 <body>
 
 
@@ -929,5 +934,18 @@ html:root:root .mono,html:root:root .eyebrow,html:root:root .kicker{font-family:
 var top=m.querySelector('[id=top]');h+='<a href="#main">Top</a>';
 [].forEach.call(m.querySelectorAll('section[id]'),function(s){var t=s.querySelector('.sec-head h2,h2');if(t)h+='<a href="#'+s.id+'">'+t.textContent.replace(/\s+/g,' ').trim()+'</a>'});
 h+='</div><div class="box"><h4>The Federation</h4><a href="latrevia.html">Federal Republic</a><a href="executive-palace.html">Office of the President</a><a href="assembly.html" class="cur">Federal Assembly</a><a href="courts.html">Federal Courts</a><a href="commonwealth.html">Commonwealth</a></div>';sd.innerHTML=h})();</script>
-</body>
+<script id="xdir13js">(function(){var H='index.html',T='\u25C2 Xarpeia directory',d=document;
+function mk(c){var a=d.createElement('a');a.href=H;a.className='xdir '+c;a.textContent=T;a.title='Xarpeia: directory of sites on the Kosmos Datagraph';return a}
+function put(){
+ if(!d.querySelector('a.xdir.xh')){var h,a=mk('xh');
+  if(h=d.querySelector('.topbar .wrap')){h.insertBefore(a,h.querySelector('time'))}
+  else if(h=d.querySelector('.sd')){h.appendChild(a)}
+  else if(h=d.querySelector('.strip .in')){h.appendChild(a)}
+  else if(h=d.querySelector('header.top .wrap')){h.appendChild(a)}
+  else if(h=d.querySelector('#nav')){h.appendChild(a)}
+  else if(h=d.querySelector('header.win')){h.appendChild(a)}
+  else if(h=d.querySelector('.util .wrap')){h.appendChild(a)}
+  else if(h=d.querySelector('.app>aside')){h.insertBefore(a,h.firstChild)}}
+ if(!d.querySelector('a.xdir.xf')){var f=d.querySelector('footer .wrap')||d.querySelector('footer .in')||d.querySelector('footer');if(f)f.appendChild(mk('xf'))}}
+put();new MutationObserver(function(){put()}).observe(d.body,{childList:true,subtree:true});})();</script></body>
 </html>

@@ -106,7 +106,13 @@ footer .legal{margin-top:14px;padding-top:12px;border-top:1px solid var(--ln)}
 @media (max-width:560px){.realm-grid{grid-template-columns:1fr}.sched li{grid-template-columns:54px 1fr}.sched .g{display:none}.mast .nm small,.seal{display:none}.sec>.wrap,.hero>.wrap{padding:16px}nav.main a{padding-right:0;margin-right:14px}}
 @media (prefers-reduced-motion:reduce){.onair .dot{animation:none}html{scroll-behavior:auto}}
 </style>
-</head>
+<style id="xdir13">
+a.xdir{font-family:inherit;font-weight:700;color:inherit;text-decoration:underline;white-space:normal;max-width:100%;overflow-wrap:anywhere;letter-spacing:.03em}
+.sd a.xdir::before{content:none!important}
+header.top a.xdir,.sd a.xdir,#nav a.xdir,.app>aside a.xdir{display:block;margin:10px 0;padding:6px 10px;text-decoration:none;text-align:center;border:1px solid currentColor;font-size:11px;text-transform:uppercase;letter-spacing:.08em}
+.topbar a.xdir,.util a.xdir,.strip a.xdir{display:inline-block;margin:0 10px;font-size:12px}
+footer a.xdir{display:block;margin:10px 0;font-size:12px}
+</style><style id="ct13">html:root:root[data-theme=light] .ch .tag{color:#04202c!important}@media(prefers-color-scheme:light){html:root:root:not([data-theme=dark]) .ch .tag{color:#04202c!important}}html:root:root[data-theme=light] li.past time,html:root:root[data-theme=light] li.past .g{color:#5f6a5c!important}@media(prefers-color-scheme:light){html:root:root:not([data-theme=dark]) li.past time,html:root:root:not([data-theme=dark]) li.past .g{color:#5f6a5c!important}}</style></head>
 <body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
 <linearGradient id="vrsg" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#08acf3"/><stop offset=".5" stop-color="#07d6ad"/><stop offset="1" stop-color="#4069ed"/></linearGradient>
@@ -362,5 +368,18 @@ function initSched(cfg,n){
   if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px',threshold:.06});rv.forEach(function(el){io.observe(el)})}else rv.forEach(function(el){el.classList.add('in')});
 })();
 </script>
-</body>
+<script id="xdir13js">(function(){var H='index.html',T='\u25C2 Xarpeia directory',d=document;
+function mk(c){var a=d.createElement('a');a.href=H;a.className='xdir '+c;a.textContent=T;a.title='Xarpeia: directory of sites on the Kosmos Datagraph';return a}
+function put(){
+ if(!d.querySelector('a.xdir.xh')){var h,a=mk('xh');
+  if(h=d.querySelector('.topbar .wrap')){h.insertBefore(a,h.querySelector('time'))}
+  else if(h=d.querySelector('.sd')){h.appendChild(a)}
+  else if(h=d.querySelector('.strip .in')){h.appendChild(a)}
+  else if(h=d.querySelector('header.top .wrap')){h.appendChild(a)}
+  else if(h=d.querySelector('#nav')){h.appendChild(a)}
+  else if(h=d.querySelector('header.win')){h.appendChild(a)}
+  else if(h=d.querySelector('.util .wrap')){h.appendChild(a)}
+  else if(h=d.querySelector('.app>aside')){h.insertBefore(a,h.firstChild)}}
+ if(!d.querySelector('a.xdir.xf')){var f=d.querySelector('footer .wrap')||d.querySelector('footer .in')||d.querySelector('footer');if(f)f.appendChild(mk('xf'))}}
+put();new MutationObserver(function(){put()}).observe(d.body,{childList:true,subtree:true});})();</script></body>
 </html>

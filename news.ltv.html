@@ -314,7 +314,13 @@ html:root:root .hero .time,html:root:root .hero .meta,html:root:root .hero .when
 html:root:root .sec>.w,html:root:root .sec>.wrap{padding:0 16px!important}}
 @media(prefers-color-scheme:dark){html:root:root:not([data-theme="light"]) .poster{box-shadow:inset 0 0 0 999px rgba(0,0,0,.38)!important}}
 html:root:root[data-theme="dark"] .poster{box-shadow:inset 0 0 0 999px rgba(0,0,0,.38)!important}
-</style></head><body>
+</style><style id="xdir13">
+a.xdir{font-family:inherit;font-weight:700;color:inherit;text-decoration:underline;white-space:normal;max-width:100%;overflow-wrap:anywhere;letter-spacing:.03em}
+.sd a.xdir::before{content:none!important}
+header.top a.xdir,.sd a.xdir,#nav a.xdir,.app>aside a.xdir{display:block;margin:10px 0;padding:6px 10px;text-decoration:none;text-align:center;border:1px solid currentColor;font-size:11px;text-transform:uppercase;letter-spacing:.08em}
+.topbar a.xdir,.util a.xdir,.strip a.xdir{display:inline-block;margin:0 10px;font-size:12px}
+footer a.xdir{display:block;margin:10px 0;font-size:12px}
+</style><style id="ct13">html:root:root[data-theme=dark] h3.sh{color:#ffd23f!important}@media(prefers-color-scheme:dark){html:root:root:not([data-theme=light]) h3.sh{color:#ffd23f!important}}html:root:root[data-theme=light] h3.sh{color:#3b1a78!important}@media(prefers-color-scheme:light){html:root:root:not([data-theme=dark]) h3.sh{color:#3b1a78!important}}html:root:root[data-theme=light] li.past p,html:root:root[data-theme=light] li.past small{color:#6a5a4c!important}@media(prefers-color-scheme:light){html:root:root:not([data-theme=dark]) li.past p,html:root:root:not([data-theme=dark]) li.past small{color:#6a5a4c!important}}</style></head><body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><symbol id="ltv" viewBox="-4 -55.5 259 159.5"><path fill="currentColor" d="M0 0H25V75H65V100H0Z"/><path fill="currentColor" d="M52 0H139V25H108.0V100H83.0V25H52Z"/><path fill="currentColor" d="M147 0H175.18L199.0 46.26L222.82 0H251L199.50 100H198.50Z"/><circle cx="199.00" cy="-31.00" r="18.50" fill="#f6b800"/></symbol></defs></svg>
 <header class="top"><div class="wrap">
 <a class="brand" href="#/" aria-label="LTV"><svg class="ltvm" viewBox="0 0 259 159.5" role="img" aria-label="LTV"><use href="#ltv" width="259" height="159.5"/></svg><small>News</small></a>
@@ -901,4 +907,17 @@ function route(){var p=location.hash.replace(/^#\/?/,'').split('/'),r=p[0],nav=d
  var cur=r==='weather'?'weather':r==='desk'?p[1]:r==='story'&&findStory(p[1])?findStory(p[1]).desk:'';for(var i=0;i<nav.length;i++)nav[i].setAttribute('aria-current',nav[i].getAttribute('data-r')===cur?'page':'false');window.scrollTo(0,0)}
 setupChrome('ltv-theme');window.addEventListener('hashchange',route);route();
 
-</script></body></html>
+</script><script id="xdir13js">(function(){var H='index.html',T='\u25C2 Xarpeia directory',d=document;
+function mk(c){var a=d.createElement('a');a.href=H;a.className='xdir '+c;a.textContent=T;a.title='Xarpeia: directory of sites on the Kosmos Datagraph';return a}
+function put(){
+ if(!d.querySelector('a.xdir.xh')){var h,a=mk('xh');
+  if(h=d.querySelector('.topbar .wrap')){h.insertBefore(a,h.querySelector('time'))}
+  else if(h=d.querySelector('.sd')){h.appendChild(a)}
+  else if(h=d.querySelector('.strip .in')){h.appendChild(a)}
+  else if(h=d.querySelector('header.top .wrap')){h.appendChild(a)}
+  else if(h=d.querySelector('#nav')){h.appendChild(a)}
+  else if(h=d.querySelector('header.win')){h.appendChild(a)}
+  else if(h=d.querySelector('.util .wrap')){h.appendChild(a)}
+  else if(h=d.querySelector('.app>aside')){h.insertBefore(a,h.firstChild)}}
+ if(!d.querySelector('a.xdir.xf')){var f=d.querySelector('footer .wrap')||d.querySelector('footer .in')||d.querySelector('footer');if(f)f.appendChild(mk('xf'))}}
+put();new MutationObserver(function(){put()}).observe(d.body,{childList:true,subtree:true});})();</script></body></html>

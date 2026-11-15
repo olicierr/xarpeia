@@ -296,7 +296,6 @@ html:root:root body[data-retro="home"] main#top>.sec{margin-bottom:10px!importan
 html:root:root .hero .w{grid-template-columns:1fr!important}
 html:root:root .one-art{display:none!important}}
 @media(min-width:901px){html:root:root .top .brand svg.lpnm{width:92px!important;height:auto!important}
-html:root:root .box h4::after,html:root:root .sch h4::after,html:root:root .chart h4::after,html:root:root .bx>h3::after,html:root:root .bx>.bh::after{content:"_ \25A1 \00D7"!important;float:right!important;letter-spacing:.25em!important;font-weight:700!important;opacity:.9!important}
 html:root:root nav.main::before{content:"Channels"!important;display:block!important;font:700 11px var(--r-ff)!important;letter-spacing:.14em!important;text-transform:uppercase!important;padding:2px 4px 6px!important;color:var(--r-topink)!important;opacity:.85!important;border-bottom:1px solid color-mix(in srgb,var(--r-topink) 40%,transparent)!important;margin-bottom:4px!important}
 html:root:root nav.main a::before{content:""!important;display:inline-block!important;width:8px!important;height:8px!important;margin-right:8px!important;background:var(--gold)!important;border:1px solid #000!important}}
 html:root:root h1,html:root:root h2,html:root:root h3,html:root:root .lpnh{font-family:Georgia,"Times New Roman",serif!important;font-weight:700!important}
@@ -372,7 +371,13 @@ html:root:root .sec h2,html:root:root .sec h2 *,html:root:root .sec .hd h2 em,ht
 html:root:root h1 em,html:root:root .hd2 h1 em{color:var(--brand)!important}
 @media(min-width:901px){html:root:root .top{--r-mastbg:#2b1411!important;--r-mast:#2b1411!important;--r-topink:#ffffff!important;background:#2b1411!important;border-bottom-color:var(--brand)!important}
 html:root:root .top .brand svg.lpnm{background:#19130f!important}}
-</style></head><body>
+</style><style id="xdir13">
+a.xdir{font-family:inherit;font-weight:700;color:inherit;text-decoration:underline;white-space:normal;max-width:100%;overflow-wrap:anywhere;letter-spacing:.03em}
+.sd a.xdir::before{content:none!important}
+header.top a.xdir,.sd a.xdir,#nav a.xdir,.app>aside a.xdir{display:block;margin:10px 0;padding:6px 10px;text-decoration:none;text-align:center;border:1px solid currentColor;font-size:11px;text-transform:uppercase;letter-spacing:.08em}
+.topbar a.xdir,.util a.xdir,.strip a.xdir{display:inline-block;margin:0 10px;font-size:12px}
+footer a.xdir{display:block;margin:10px 0;font-size:12px}
+</style><style id="ct13">html:root:root[data-theme=dark] i.unc{color:#4a1022!important}@media(prefers-color-scheme:dark){html:root:root:not([data-theme=light]) i.unc{color:#4a1022!important}}html:root:root[data-theme=light] i.unc{color:#ffd1da!important}@media(prefers-color-scheme:light){html:root:root:not([data-theme=dark]) i.unc{color:#ffd1da!important}}html:root:root[data-theme=light] li.past p,html:root:root[data-theme=light] li.past small,html:root:root[data-theme=light] .sch li.past *{color:#6b5a50!important}@media(prefers-color-scheme:light){html:root:root:not([data-theme=dark]) li.past p,html:root:root:not([data-theme=dark]) li.past small,html:root:root:not([data-theme=dark]) .sch li.past *{color:#6b5a50!important}}</style></head><body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><symbol id="lpn" viewBox="0 0 455 573"><path fill="#FFB400" d="M0 0H64V509H236V573H0Z"/><path fill="#D9571A" fill-rule="evenodd" d="M86 0H236A92 92 0 0 1 236 184H150V487H86ZM150 62H236A30 30 0 0 1 236 122H150Z"/><path fill="#BC1116" d="M172 206H236V487H172ZM391 206H455V573H391ZM172 206H272L455 573H355Z"/></symbol>
 <symbol id="lpnm" viewBox="0 0 455 573"><path fill="currentColor" d="M0 0H64V509H236V573H0Z"/><path fill="currentColor" fill-rule="evenodd" d="M86 0H236A92 92 0 0 1 236 184H150V487H86ZM150 62H236A30 30 0 0 1 236 122H150Z"/><path fill="currentColor" d="M172 206H236V487H172ZM391 206H455V573H391ZM172 206H272L455 573H355Z"/></symbol></defs></svg>
 <header class="top"><div class="wrap">
@@ -796,4 +801,17 @@ setupChrome('lpn-theme');
 document.getElementById('langBtn').addEventListener('click',function(){LANG=LANG==='es'?'en':'es';try{localStorage.setItem('lpn-lang',LANG)}catch(e){}var y=window.scrollY;route();window.scrollTo(0,y)});
 window.addEventListener('hashchange',route);route();
 
-</script><nav class="fast" id="fast" aria-label="Text keys"></nav><script>(function(){var f=document.getElementById('fast'),n=document.getElementById('nav');if(!f||!n)return;var a=n.querySelectorAll('a'),h='<span class="pg"><b>P100</b> LPN NOTICIAS</span>',k=0;for(var i=0;i<a.length&&k<4;i++){var t=(a[i].textContent||'').replace(/\s+/g,' ').trim();if(!t||t.length>18)continue;h+='<a href="'+a[i].getAttribute('href')+'">'+t+'</a>';k++}f.innerHTML=h})();</script></body></html>
+</script><nav class="fast" id="fast" aria-label="Text keys"></nav><script>(function(){var f=document.getElementById('fast'),n=document.getElementById('nav');if(!f||!n)return;var a=n.querySelectorAll('a'),h='<span class="pg"><b>P100</b> LPN NOTICIAS</span>',k=0;for(var i=0;i<a.length&&k<4;i++){var t=(a[i].textContent||'').replace(/\s+/g,' ').trim();if(!t||t.length>18)continue;h+='<a href="'+a[i].getAttribute('href')+'">'+t+'</a>';k++}f.innerHTML=h})();</script><script id="xdir13js">(function(){var H='index.html',T='\u25C2 Xarpeia directory',d=document;
+function mk(c){var a=d.createElement('a');a.href=H;a.className='xdir '+c;a.textContent=T;a.title='Xarpeia: directory of sites on the Kosmos Datagraph';return a}
+function put(){
+ if(!d.querySelector('a.xdir.xh')){var h,a=mk('xh');
+  if(h=d.querySelector('.topbar .wrap')){h.insertBefore(a,h.querySelector('time'))}
+  else if(h=d.querySelector('.sd')){h.appendChild(a)}
+  else if(h=d.querySelector('.strip .in')){h.appendChild(a)}
+  else if(h=d.querySelector('header.top .wrap')){h.appendChild(a)}
+  else if(h=d.querySelector('#nav')){h.appendChild(a)}
+  else if(h=d.querySelector('header.win')){h.appendChild(a)}
+  else if(h=d.querySelector('.util .wrap')){h.appendChild(a)}
+  else if(h=d.querySelector('.app>aside')){h.insertBefore(a,h.firstChild)}}
+ if(!d.querySelector('a.xdir.xf')){var f=d.querySelector('footer .wrap')||d.querySelector('footer .in')||d.querySelector('footer');if(f)f.appendChild(mk('xf'))}}
+put();new MutationObserver(function(){put()}).observe(d.body,{childList:true,subtree:true});})();</script></body></html>
