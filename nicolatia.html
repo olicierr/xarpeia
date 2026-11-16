@@ -76,16 +76,22 @@ a.xdir{font-family:inherit;font-weight:700;color:inherit;text-decoration:underli
 header.top a.xdir,.sd a.xdir,#nav a.xdir,.app>aside a.xdir{display:block;margin:10px 0;padding:6px 10px;text-decoration:none;text-align:center;border:1px solid currentColor;font-size:11px;text-transform:uppercase;letter-spacing:.08em}
 .topbar a.xdir,.util a.xdir,.strip a.xdir{display:inline-block;margin:0 10px;font-size:12px}
 footer a.xdir{display:block;margin:10px 0;font-size:12px}
-</style><style id="mob16g">@media screen and (max-width:700px){
+</style><style id="mob16g">@media screen and (max-width:600px){
 html:root:root nav.nav,html:root:root nav.mnav,html:root:root nav.navrow,html:root:root nav.tabs{display:flex!important;flex-wrap:nowrap!important;overflow-x:auto!important;-webkit-overflow-scrolling:touch;gap:4px!important;padding-bottom:4px;scrollbar-width:thin;max-height:none!important}
 html:root:root nav.nav>*,html:root:root nav.mnav>*,html:root:root nav.navrow>*,html:root:root nav.tabs>*{flex:none!important;white-space:nowrap!important;min-height:40px;display:inline-flex!important;align-items:center}
 html:root:root .hero,html:root:root .pagehead,html:root:root main{scroll-margin-top:8px}
 html:root:root a.xdir{min-height:36px;display:inline-flex;align-items:center}
-}</style><style id="mob17g">@media screen and (max-width:700px){
+}</style><style id="mob17g">@media screen and (max-width:600px){
 html:root:root header.win .tb.big small#clk{display:none!important}
 html:root:root header.win .tb.big{padding:4px 8px!important}
 html:root:root header.win .tb.big .tt{font-size:15px!important;white-space:nowrap}
-}</style></head><body>
+}</style><style id="obs19">html:root:root a.xdir{display:inline-block!important;border:0!important;background:none!important;box-shadow:none!important;padding:6px 2px!important;margin:0 8px!important;font-weight:400!important;letter-spacing:.03em!important;text-transform:none!important;text-decoration:underline dotted!important;text-underline-offset:2px;opacity:.6;min-height:0!important;text-align:left!important;width:auto!important}
+@media(min-width:381px){html:root:root a.xdir{font-size:10px!important}}
+html:root:root a.xdir:hover,html:root:root a.xdir:focus{opacity:1}
+html:root:root a.xdir.xh{margin-left:auto!important}
+html:root:root header.top a.xdir,html:root:root .sd a.xdir,html:root:root .app>aside a.xdir,html:root:root #nav a.xdir{display:block!important;margin:6px 0 0!important;text-align:center!important}
+html:root:root footer a.xdir{display:block!important;margin:6px 0!important}
+</style></head><body>
 <div class="site">
 <header class="win"><div class="tb big"><span id="tbi"></span><span class="tt" id="tbt"></span><small id="clk"></small></div><nav class="navrow" id="nav" aria-label="Sections"></nav></header>
 <div class="cols"><aside class="side sl" id="left"></aside><section class="win"><div class="tb"><span class="tt" id="mt"></span></div><main class="bd cont" id="main" tabindex="-1"></main></section><aside class="side sr" id="right"></aside></div>
@@ -251,7 +257,7 @@ route();setInterval(function(){var c=$('clk');if(c)c.textContent=clock()},20000)
 function mk(c){var a=d.createElement('a');a.href=H;a.className='xdir '+c;a.textContent=T;a.title='Xarpeia: directory of sites on the Kosmos Datagraph';return a}
 function put(){
  if(!d.querySelector('a.xdir.xh')){var h,a=mk('xh');
-  if(h=d.querySelector('.topbar .wrap')){h.insertBefore(a,h.querySelector('time'))}
+  if(h=d.querySelector('.topbar .wrap')){var tm=h.querySelector('time');if(tm&&tm.parentNode===h)h.insertBefore(a,tm);else h.appendChild(a)}
   else if(h=d.querySelector('.sd')){h.appendChild(a)}
   else if(h=d.querySelector('.strip .in')){h.appendChild(a)}
   else if(h=d.querySelector('header.top .wrap')){h.appendChild(a)}
